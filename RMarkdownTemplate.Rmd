@@ -1,0 +1,171 @@
+---
+title: "An R Markdown template"
+author: "Tiago A. Marques"
+date: "\today"
+output:
+  html_document:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    number_sections: yes
+    theme: cerulean
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+  word_document:
+    toc: yes
+    toc_depth: '3'
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+csl: mee.csl
+subtitle: An RMarkdown that does lots of stuff!
+bibliography: biblio.bib
+urlcolor: blue
+---
+
+******
+
+******
+
+
+\newpage
+
+# Introduction
+
+This document was created as a gentle introduction to the use of RMarkdown for generating dynamic reports, embedded in a paradigm of reproducible research. For easier use one asusmes that R Studio is being used.
+
+The document was created by Tiago A. Marques and it's intended use is to be shared with others, providing them a quick learning experience of some fundamental tips and tricks of thingsone often wants to do in a dynamic report by having an example template. 
+
+By kniting this template one can see how the different features of RMarkdown are set up. This template can be knited into an html, a pdf or word document. For pdfs you might need additional software installed like a Latex system. We are currently it is optimized for html, so it might require minor tweaking for rendering pdf and word with optimal format.
+
+If you use this template drop me a line at tiago.marques@st-andrews.ac.uk. If you have any suggestions, please keep them coming.
+
+# Basic RMarkdown tricks
+
+First, we load the `knitr` package that can be of help:
+
+```{r}
+library(knitr)
+```
+
+## Finding help online
+
+There are so many resources online that is hard to list just a few, but just in case:
+
+* An RStudio course on RMarkdown is here: https://rmarkdown.rstudio.com/lesson-1.html
+
+At the corresponding RMarkdown sheat sheets are here:
+
+* Here is the [link](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) 
+
+As you can seen, these are two different ways of providing links in RMarkdown!
+
+## It is dynamic
+
+To get us going we first generate two datasets in this folder, using an existing R data set.
+
+```{r}
+write.table(file="cars1to10.txt",cars[1:10,])
+write.table(file="cars11to20.txt",cars[11:20,])
+```
+
+This allows us to confirm that the exact same code will produce different dynamic results, as a consequence of changing the data we are using.
+
+The plot below will use the object `mydata` to make a plot.
+
+```{r}
+mydata <- read.table(file="cars1to10.txt")
+plot(mydata)
+```
+
+The maximum value for `speed` in this file is `r max(mydata$speed)`. Note this is a dynamic value, we have not really written that number in the .Rmd text. Check the .Rmd to see how that is done,
+
+Now, if after a while your collaborator sends you a new data set, in the non-reproducible research world you would ave to repeate it all. Not here. You just have to read the new data in and the exact same code can be used, now producing diferent results.
+
+
+```{r}
+mydata <- read.table(file="cars11to20.txt")
+plot(mydata)
+```
+
+The maximum value for `speed` in this file is now `r max(mydata$speed)`. Dynamic values rock!
+
+## Hyde and seek
+
+We might want to show code and then the output of it
+
+```{r}
+a <- 3
+b <- 4
+a+b
+```
+
+but we might also just want to show code and no output
+
+```{r,eval=FALSE}
+a <- 3
+b <- 4
+a+b
+```
+
+or vice versa, just the output
+
+```{r,eval=TRUE,show=FALSE}
+a <- 3
+b <- 4
+a+b
+```
+
+Note there are many such parameters that you can tweak in the code chuck headers, and you can find them in the cheat sheet I provided a link above for. 
+
+# Adding References
+
+One of the big dramas of large reports and thesis are generating references, properly formatted.
+
+That is straingtforward in RMarqudown. This template shows you a way to do so, but you might considere exploring other alternatives.
+
+You need a file that contains the references (a bib file) and optionally a file that formats the references (I provide the mee.cls as an example). So here we use:
+
+* biblio.bib
+* mee.cls
+
+Then, each time you want to cite a reference, you need to have it in the .bib file. For that I recomend using JABREF (https://www.jabref.org/), but any reference manager that can generate bibtex files will do. Each reference has associated with it a "BibtexKey". Then you just use that with an "@" in front to cite that reference.
+
+As an example, here is a citation, a great resource for GLMs is @Faraway2006, and a good introduction to GAMs is @Wood2006. Ecological regression examples can be found in @Zuur2009b.
+
+As you will see, these references will be present at the end of the document, in a suitably named sections (I used "References"!)
+
+# Figures and Tables
+
+As you have seen above, we can include figures easily as outputs from R
+
+```{r}
+plot(rnorm(100))
+```
+
+However, we can actually include external images easily:
+
+![A legend if needed, here, an RMarkdown book!](rmdbook.jpg)
+
+also, if you want to include a table, you might use the `kable` fuction to format it
+
+```{r}
+kable(cars,caption="A table with the dataset cars")
+```
+
+
+There are much fancier table types, and additional packages for table formatting. Take a peak e.g. here:
+
+https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/
+
+
+
+# Contributors
+
+Many folks have provided inputs and requests that have improved this document. 
+
+# References
+
+
+
