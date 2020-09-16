@@ -41,14 +41,6 @@ By kniting this template one can see how the different features of RMarkdown are
 
 If you use this template drop me a line at tiago.marques@st-andrews.ac.uk. If you have any suggestions, please keep them coming.
 
-# About output format
-
-This template can be knited into an html, a pdf or word document. 
-
-For pdfs you might need additional software installed like a Latex system.
-
-We are currently it is optimized for html, so it might require minor tweaking for rendering pdf and word with optimal format. As an example of minor formatting differences depending on the compiling considered, in the pdf the date of compilation is outputed by default in the header, while that does not happen in the html.
-
 # Basic RMarkdown tricks
 
 First, we load the `knitr` package that can be of help:
@@ -168,10 +160,33 @@ There are much fancier table types, and additional packages for table formatting
 https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/
 
 
+# About output format
+
+This template can be knited into an html, a pdf or word document. 
+
+For pdfs you might need additional software installed like a Latex system.
+
+We are currently it is optimized for html, so it might require minor tweaking for rendering pdf and word with optimal format. As an example of minor formatting differences depending on the compiling considered, in the pdf the date of compilation is outputed by default in the header, while that does not happen in the html.
+
+The header of an .Rmd file contains yaml that allows one to control the document. There are many many features that you can costumize. 
+
+Just as an example, try to add a line that says `code_folding: hide`, so go from this
+
+![Header without code folding!](header.JPG)
+
+to this
+
+![Header with code folding!](headerwithcodefolding.JPG)
+
+and then compare what happens to the code in the html.
+
+Note that you can control the output of each of the html, pdf and word documents separately, by changing arguments under the sub-headings under the `output:` heading, `html_document`, `word_document` and `pdf_document`, respectively.
 
 # Contributors
 
 Many folks have provided inputs and requests that have improved this document. 
+
+If you have sent me inputs your name should be listed here. If it is not, plese complain!
 
 # References
 
