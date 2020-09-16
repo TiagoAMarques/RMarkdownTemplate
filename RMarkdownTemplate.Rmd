@@ -4,6 +4,7 @@ author: "Tiago A. Marques"
 date: \today
 output:
   html_document:
+    code_folding: hide
     fig_caption: yes
     force_captions: yes
     highlight: pygments
@@ -12,16 +13,16 @@ output:
     toc: yes
     toc_depth: 3
     toc_float: yes
-  word_document:
-    toc: yes
-    toc_depth: '3'
   pdf_document:
     toc: yes
     toc_depth: '3'
-csl: mee.csl
-subtitle: An RMarkdown that does lots of stuff!
-bibliography: biblio.bib
+  word_document:
+    toc: yes
+    toc_depth: '3'
+subtitle: An RMarkdown that does lots of stuff! 
 urlcolor: blue
+csl: mee.csl
+bibliography: biblio.bib
 ---
 
 ******
@@ -111,7 +112,7 @@ a+b
 
 or vice versa, just the output
 
-```{r,eval=TRUE,show=FALSE}
+```{r,eval=TRUE,echo=FALSE}
 a <- 3
 b <- 4
 a+b
@@ -123,7 +124,7 @@ Note there are many such parameters that you can tweak in the code chuck headers
 
 One of the big dramas of large reports and thesis are generating references, properly formatted.
 
-That is straingtforward in RMarqudown. This template shows you a way to do so, but you might considere exploring other alternatives.
+That is straingtforward in RMarkdown. This template shows you a way to do so, but you might considere exploring other alternatives.
 
 You need a file that contains the references (a bib file) and optionally a file that formats the references (I provide the mee.cls as an example). So here we use:
 
@@ -134,7 +135,9 @@ Then, each time you want to cite a reference, you need to have it in the .bib fi
 
 As an example, here is a citation, a great resource for GLMs is @Faraway2006, and a good introduction to GAMs is @Wood2006. Ecological regression examples can be found in @Zuur2009b.
 
-As you will see, these references will be present at the end of the document, in a suitably named sections (I used "References"!)
+As you will see, these references will be present at the end of the document, in a suitably named sections (I used "References"!).
+
+Note that if there are funny characters in the .bib file you might face compiling problems!
 
 # Figures and Tables
 
@@ -170,7 +173,7 @@ We are currently it is optimized for html, so it might require minor tweaking fo
 
 The header of an .Rmd file contains yaml that allows one to control the document. There are many many features that you can costumize. 
 
-Just as an example, try to add a line that says `code_folding: hide`, so go from this
+Just as an example, try to add a line that says `code_folding: hide` and then try `code_folding: show`, so go from this
 
 ![Header without code folding!](header.JPG)
 
