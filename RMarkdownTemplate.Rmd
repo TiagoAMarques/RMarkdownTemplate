@@ -36,11 +36,14 @@ bibliography: biblio.bib
 
 This document was created as a gentle introduction to the use of RMarkdown for generating dynamic reports, embedded in a paradigm of reproducible research. For easier use one asusmes that R Studio is being used.
 
-The document was created by Tiago A. Marques and it's intended use is to be shared with others, providing them a quick learning experience of some fundamental tips and tricks of thingsone often wants to do in a dynamic report by having an example template. 
+The document was created is intended use is to be shared with folks new to RMarkdown, providing them a quick learning experience of some fundamental tips and tricks of things one often wants to do in a dynamic report by having an example template. By kniting this template one can see how the different features of RMarkdown are set up, and hence get up to speed with generating dynamic reports without really knowing what you are doing. I have come to realize that once folks see all the potential of the tool they are much more likely to continue to learn it by themselves.
 
-By kniting this template one can see how the different features of RMarkdown are set up.
+If you use this template drop me a line at tiago.marques@st-andrews.ac.uk. If you have any suggestions or comments please consider sending them to me.
 
-If you use this template drop me a line at tiago.marques@st-andrews.ac.uk. If you have any suggestions, please keep them coming.
+This document is hosted at a git repository:
+
+https://github.com/TiagoAMarques/RMarkdownTemplate
+
 
 # Basic RMarkdown tricks
 
