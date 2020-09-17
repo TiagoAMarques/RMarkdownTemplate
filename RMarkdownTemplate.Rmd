@@ -36,7 +36,11 @@ bibliography: biblio.bib
 
 This document was created as a gentle introduction to the use of RMarkdown for generating dynamic reports, embedded in a paradigm of reproducible research. For easier use one asusmes that R Studio is being used.
 
-The document was created is intended use is to be shared with folks new to RMarkdown, providing them a quick learning experience of some fundamental tips and tricks of things one often wants to do in a dynamic report by having an example template. By kniting this template one can see how the different features of RMarkdown are set up, and hence get up to speed with generating dynamic reports without really knowing what you are doing. I have come to realize that once folks see all the potential of the tool they are much more likely to continue to learn it by themselves.
+The document was created is intended use is to be shared with folks new to RMarkdown, providing them a quick learning experience of some fundamental tips and tricks of things one often wants to do in a dynamic report by having an example template. 
+
+By kniting this template and going back and forth over the .Rmd and comparing it with the output (html, pdf or word) one can see how the different features of RMarkdown are set up, and hence get up to speed with generating dynamic reports without really knowing what you are doing. 
+
+Doing something without really knowing what you are doing is usually a bad thing... but... I have come to realize that once folks see all the potential of the tool they are much more likely to continue to learn it by themselves. So the end justifies the means, at least in this case, in my opinion!
 
 If you use this template drop me a line at tiago.marques@st-andrews.ac.uk. If you have any suggestions or comments please consider sending them to me.
 
@@ -65,9 +69,10 @@ At the corresponding RMarkdown sheat sheets are here:
 
 As you can seen, these are two different ways of providing links in RMarkdown!
 
-A free access definitive guide on RMarkdown by Yihui Xie, J. J. Allaire and  Garrett Grolemund is also here. If you don't find what you need there, you are really looking for something out of the ordinary:
+A [free access definitive guide on RMarkdown](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire and  Garrett Grolemund is also here. If you don't find what you need there, you are really looking for something out of the ordinary:
 
-https://bookdown.org/yihui/rmarkdown/
+Finaly, [Pimp my RMD: a few tips for R Markdown](https://holtzy.github.io/Pimp-my-rmd/)
+by Yan Holtz contains several tips and tricks that might be useful.
 
 ## It is dynamic
 
@@ -98,6 +103,8 @@ plot(mydata)
 ```
 
 The maximum value for `speed` in this file is now `r max(mydata$speed)`. Dynamic values rock!
+
+As an example, you can even print here when this document was compiled. This was compiled on `r date()`.
 
 ## Hyde and seek
 
