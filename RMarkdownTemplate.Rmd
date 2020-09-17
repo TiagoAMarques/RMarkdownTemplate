@@ -62,6 +62,10 @@ At the corresponding RMarkdown sheat sheets are here:
 
 As you can seen, these are two different ways of providing links in RMarkdown!
 
+A free access definitive guide on RMarkdown by Yihui Xie, J. J. Allaire and  Garrett Grolemund is also here. If you don't find what you need there, you are really looking for something out of the ordinary:
+
+https://bookdown.org/yihui/rmarkdown/
+
 ## It is dynamic
 
 To get us going we first generate two datasets in this folder, using an existing R data set.
@@ -141,6 +145,8 @@ Note that if there are funny characters in the .bib file you might face compilin
 
 # Figures and Tables
 
+## Figures
+
 As you have seen above, we can include figures easily as outputs from R
 
 ```{r}
@@ -151,16 +157,33 @@ However, we can actually include external images easily:
 
 ![A legend if needed, here, an RMarkdown book!](rmdbook.jpg)
 
-also, if you want to include a table, you might use the `kable` fuction to format it
+## Tables
+
+If you want to include a table, you might just print it
+
+```{r}
+head(iris,15)
+```
+
+but that looks, let's face it, rather horrible. The next bext thing is to consider changing the yaml, and adding something to the html output `df_print: paged`, as in
+
+![How to change the yaml header to get improved tables](df_print.JPG)
+
+Try it and you will get something like this
+
+![An improved table](improvedtable.JPG)
+
+Another option be to explore the `kable` fuction, from package `knitr`, to help formating the table
 
 ```{r}
 kable(cars,caption="A table with the dataset cars")
 ```
 
-
 There are much fancier table types, and additional packages for table formatting. Take a peak e.g. here:
 
 https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/
+
+If you care to make an example using some of the additional table formatting packages found there (including `DT`,`gt`,`kableExtra`, `formattable`, `reactable` and/or `flextable`) please consider contributing it to this document. The tables you get from using `reactable` seem especially fancy, but getting them up and running seems to require some time investment.
 
 
 # About output format
