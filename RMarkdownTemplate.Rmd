@@ -147,11 +147,6 @@ You need a file that contains the references (a bib file) and optionally a file 
 
 Then, each time you want to cite a reference, you need to have it in the .bib file. For that I recomend using JABREF (https://www.jabref.org/), but any reference manager that can generate bibtex files will do. Each reference has associated with it a "BibtexKey". Then you just use that with an "@" in front to cite that reference.
 
-And dolphins! @Lundquist2012
-
-And ants too
-@AmadorVargas2019
-
 As an example, here is a citation, a great resource for GLMs is @Faraway2006, and a good introduction to GAMs is @Wood2006. Ecological regression examples can be found in @Zuur2009b.
 
 As you will see, these references will be present at the end of the document, in a suitably named sections (I used "References"!).
