@@ -6,7 +6,7 @@ The objective of this repository is to provide a hands on easy going introductio
 
 Instructions: download all the files into a folder (you might not need them all, but that makes sure you have all you might need!). Then simply open the file RMarkdownTemplate.Rmd and knit it under your RStudio session. Explore the results to see what does what, and then expand it and customize it to your needs.
 
-A bit mnore detail:
+A bit more detail:
 
 The main file is RMarkdownTemplate.Rmd. All the other files are just required for the above file to compile adequately.
 
