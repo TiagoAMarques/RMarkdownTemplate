@@ -138,7 +138,7 @@ Note there are many such parameters that you can tweak in the code chuck headers
 
 One of the big dramas of large reports and thesis are generating references, properly formatted.
 
-That is straingtforward in RMarkdown. This template shows you a way to do so, but you might considere exploring other alternatives.
+That is straingtforward in RMarkdown. This template shows you a way to do so, but you might consider exploring other alternatives. 
 
 You need a file that contains the references (a bib file) and optionally a file that formats the references (I provide the mee.cls as an example). So here we use:
 
@@ -149,9 +149,11 @@ Then, each time you want to cite a reference, you need to have it in the .bib fi
 
 As an example, here is a citation, a great resource for GLMs is @Faraway2006, and a good introduction to GAMs is @Wood2006. Ecological regression examples can be found in @Zuur2009b.
 
-As you will see, these references will be present at the end of the document, in a suitably named sections (I used "References"!).
+As you will see, these references will be present at the end of the document, in a suitably named section (I used "References"!).
 
 Note that if there are funny characters in the .bib file you might face compiling problems!
+
+If you need additional guidance in this process, there is a holding hands document called "StepByStep.pptx" that has a visual tutorial of all these steps with computer screenshots of what needs to be done to make this work. This should be fool proof. If you have any trouble with it please report and I'll update this document.
 
 # Figures and Tables
 

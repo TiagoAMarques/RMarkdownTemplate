@@ -2,7 +2,7 @@ This is a readme file for RMarkdownTemplate.
 
 This is intendend as a simple repository which main file is RMarkdownTemplate.Rmd. All the other files are just required for the above file to compile adequately.
 
-You need to know your way around R studio to use this template, so you might find this tutorial with an intro to R and R Studio useful
+You need to know your way around R studio to use this template, and if that is not your case (yet!), you might find this companion tutorial with an intro to R and R Studio useful
 
 https://github.com/TiagoAMarques/AnIntro2RTutorial
 
