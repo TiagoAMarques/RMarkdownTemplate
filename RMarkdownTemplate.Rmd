@@ -34,6 +34,8 @@ bibliography: biblio.bib
 
 # Introduction
 
+Here we explore the results using @Marques2013b.
+
 This document was created as a gentle introduction to the use of RMarkdown for generating dynamic reports, embedded in a paradigm of reproducible research. For easier use one asusmes that R Studio is being used.
 
 The document was created is intended use is to be shared with folks new to RMarkdown, providing them a quick learning experience of some fundamental tips and tricks of things one often wants to do in a dynamic report by having an example template. 
