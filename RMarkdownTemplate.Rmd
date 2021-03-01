@@ -34,11 +34,11 @@ bibliography: biblio.bib
 
 # Introduction
 
-This document was created as a gentle introduction to the use of RMarkdown for generating dynamic reports, embedded in a paradigm of reproducible research. For easier use one asusmes that R Studio is being used.
+This document was created as a gentle introduction to the use of RMarkdown for generating dynamic reports, embedded in a paradigm of reproducible research. For easier use one assumes that R Studio is being used.
 
 The document was created is intended use is to be shared with folks new to RMarkdown, providing them a quick learning experience of some fundamental tips and tricks of things one often wants to do in a dynamic report by having an example template. 
 
-By kniting this template and going back and forth over the .Rmd and comparing it with the output (html, pdf or word) one can see how the different features of RMarkdown are set up, and hence get up to speed with generating dynamic reports without really knowing what you are doing. 
+By kniting this template and going back and forth over the .Rmd and comparing it with the output (html, pdf or word) one can see how the different features of RMarkdown are set up, and hence get up to speed with generating dynamic reports, almost without really knowing what you are doing. 
 
 Doing something without really knowing what you are doing is usually a bad thing... but... I have come to realize that once folks see all the potential of the tool they are much more likely to continue to learn it by themselves. So the end justifies the means, at least in this case, in my opinion!
 
